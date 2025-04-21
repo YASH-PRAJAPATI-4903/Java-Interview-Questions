@@ -1170,7 +1170,7 @@ class Animal	{
 }
 ```
 
-Answer is no. Since we provided a constructor, compiler does not provide a default constructor.
+Answer is yes. this time no default constructor call.
 
 ### 50. How do you call a Super Class Constructor from a Constructor?
 
