@@ -893,6 +893,7 @@ class Dog	extends Pet	{
 
 **Answer:**
 
+-An interface in programming is a blueprint of a class that defines a set of abstract methods (methods without a body) that any class implementing the interface must provide. It is a way to achieve abstraction and multiple inheritance in object-oriented programming.
 - An interface defines a contract for responsibilities (methods) of a class.
 - An interface is a contract: the guy writing the interface says, "hey, I accept things looking that
   way"
