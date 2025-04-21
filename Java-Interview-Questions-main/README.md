@@ -253,6 +253,17 @@ System.out.println(small);//output	24.	Only	8	bits	remain.
 
 ## Strings
 
+### DEF. mutable and immutable defination.
+
+**Answer:**
+Mutable:
+An object is mutable if its state (data) can be changed after it is created.
+Example: StringBuilder, ArrayList.
+
+Immutable:
+An object is immutable if its state cannot be changed once it is created.
+Example: String, Integer.
+
 ### 16. Are all String’s immutable?
 
 **Answer:**
