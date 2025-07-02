@@ -59,6 +59,14 @@ parameters.
    using a process called Garbage Collection.
 5. C++ supports Multiple Inheritance. Java does not support Multiple Inheritance.
 
+### Bonus. What is the difference between == and .equals() in Java?
+
+**Answer:**
+
+== is used to compare the references (memory addresses) of two objects.
+
+.equals() is used to compare the content (data inside the objects).
+
 ### 6. What is the role for a ClassLoader in Java?
 
 **Answer:**
