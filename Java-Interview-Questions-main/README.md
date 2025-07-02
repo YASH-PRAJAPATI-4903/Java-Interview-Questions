@@ -63,9 +63,9 @@ parameters.
 
 **Answer:**
 
-== is used to compare the references (memory addresses) of two objects.
+=>   == is used to compare the references (memory addresses) of two objects.
 
-.equals() is used to compare the content (data inside the objects).
+=>   .equals() is used to compare the content (data inside the objects).
 
 ### 6. What is the role for a ClassLoader in Java?
 
