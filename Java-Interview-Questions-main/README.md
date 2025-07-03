@@ -908,6 +908,30 @@ class Dog	extends Pet	{
 - Interface represents common actions between Multiple Classes.
 - Example in Java api : Map interface, Collection interface.
 
+### Bonus. what is Implicit modifiers and explicit modifiers?
+
+**Answer:**
+Implicit modifiers:An implicit modifier is a modifier that the compiler automatically inserts into the code.
+		  :Implicit modifiers are access or behavior modifiers in programming languages (like Java) that are automatically applied by the compiler even 		   if you don't explicitly mention them in your code. 
+    | Context             | Implicit Modifier(s)           |
+| ------------------- | ------------------------------ |
+| Interface variables | `public static final`          |
+| Interface methods   | `public abstract` (by default) |
+| Enum constructors   | `private`                      |
+| Default constructor | Same visibility as the class   |
+
+explicit modifiers:Explicit modifiers are the keywords that you write directly in your code to define access control, behavior, or other properties of classes, 		   methods, and variables.
+
+| **Modifier**   | **Used With**        | **Purpose**                                                         |
+| -------------- | -------------------- | ------------------------------------------------------------------- |
+| `public`       | Class, method, field | Makes it accessible from anywhere                                   |
+| `private`      | Method, field        | Accessible only within the same class                               |
+| `protected`    | Method, field        | Accessible within the same package or subclasses                    |
+| `static`       | Method, field        | Belongs to the class instead of an instance                         |
+| `final`        | Class, method, field | Prevents modification (e.g., no overriding or reassignment)         |
+| `abstract`     | Class, method        | Used when implementation is not provided                            |
+| `synchronized` | Method, block        | Used for thread safety in concurrent programming                    |
+
 ### 38. How do you define an Interface?
 
 **Answer:**
