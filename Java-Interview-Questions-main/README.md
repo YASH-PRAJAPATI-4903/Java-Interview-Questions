@@ -3012,9 +3012,26 @@ Sealed Class Keywords:
 
 ■■ sealed: Indicates that a class or interface may only be extended/implemented by named
 classes or interfaces.
+
 ■■ permits: Used with the sealed keyword to list the classes and interfaces allowed
+
 ■■ non-sealed:
 Applied to a class or interface that extends a sealed class, indicating that it
 can be extended by unspecified classes
 
 ![image](https://github.com/user-attachments/assets/ab5e43f2-da3c-4c5a-a9cd-053d13cd2654)
+
+Sealed Class Rules:
+
+■■ Sealed classes are declared with the sealed and permits modifiers.
+
+■■ Sealed classes must be declared in the same package or named module as their direct
+subclasses.
+
+■■ Direct subclasses of sealed classes must be marked final, sealed, or non-sealed.
+
+■■ The permits clause is optional if the sealed class and its direct subclasses are declared
+within the same file or the subclasses are nested within the sealed class.
+
+■■ Interfaces can be sealed to limit the classes that implement them or the interfaces that
+extend them.
