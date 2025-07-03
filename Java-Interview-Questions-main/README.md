@@ -1023,6 +1023,58 @@ interface MyInterface {
 
 Let me know if you want to see how these work in a real Java class with `implements`!
 
+### Bonus.Default Interface Method Definition Rules.
+
+**Answer:**
+1. A default method may be declared only within an interface.
+2. A default method must be marked with the default keyword and include a method body.
+3. A default method is implicitly public.
+4. A default method cannot be marked abstract, final, or static.
+5. A default method may be overridden by a class that implements the interface.
+6. If a class inherits two or more default methods with the same method signature, then the
+class must override the method.
+
+Inheriting Duplicate default Methods
+The last rule for creating a default interface method requires some explanation. For example,
+what value would the following code output?
+```
+public interface Walk {
+public default int getSpeed() { return 5; }
+}
+public interface Run {
+public default int getSpeed() { return 10; }
+}
+public class Cat implements Walk, Run {} // DOES NOT COMPIL
+public class Cat implements Walk, Run {
+public int getSpeed() { return 1; }   // If the class implementing the interfaces overrides the duplicate
+default method, the code will compile without issue. 
+}
+```
+
+### Bonus.Declaring static Interface Methods.
+
+**Answer:**
+Interfaces are also declared with static methods. These methods are defined explicitly with
+the static keyword and, for the most part, behave just like static methods defined in classes.
+Static Interface Method Definition Rules:-
+1. A static method must be marked with the static keyword and include a
+method body.
+2. A static method without an access modifier is implicitly public.
+3. A static method cannot be marked abstract or final.
+4. A static method is not inherited and cannot be accessed in a class implementing the
+interface without a reference to the interface name.
+
+### Bonus.Private Interface Method Definition Rules.
+
+**Answer:**
+
+1. A private interface method must be marked with the private modifier and include a
+method body.
+2. A private static interface method may be called by any method within the interface
+definition.
+3. A private interface method may only be called by default and other private non-
+static
+methods within the interface definition.
 
 ### 38. How do you define an Interface?
 
