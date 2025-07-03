@@ -932,6 +932,98 @@ explicit modifiers:Explicit modifiers are the keywords that you write directly i
 | `abstract`     | Class, method        | Used when implementation is not provided                            |
 | `synchronized` | Method, block        | Used for thread safety in concurrent programming                    |
 
+### Bonus. Summary Table of Access Modifiers in Interfaces:
+
+**Answer:**
+| **Modifier** | **Allowed in Interface?** | **Purpose / Notes**                        |
+| ------------ | ------------------------- | ------------------------------------------ |
+| `public`     | ✅ Yes                     | Default for methods (explicit or implicit) |
+| `private`    | ✅ Yes (Java 9+)           | For internal helper methods                |
+| `protected`  | ❌ No                      | Not allowed in interfaces                  |
+| `default`    | ✅ Yes (Java 8+)           | For default method implementations         |
+
+**Question:** In Java, can interfaces use `private` and `default` access modifiers?
+
+**Answer:** ✅ **Yes**, but with specific rules. Let's break it down clearly:
+
+---
+
+### 🔹 1. **`default` Access Modifier in Interfaces**
+
+* ✅ **Yes, interfaces can use `default` methods**, introduced in **Java 8**.
+* A `default` method **must** have a body.
+* It's used to **provide a default implementation** inside the interface.
+
+#### 🔸 Example:
+
+```java
+interface MyInterface {
+    default void show() {
+        System.out.println("Default method in interface");
+    }
+}
+```
+
+#### 🔹 Purpose:
+
+* Allows backward compatibility: new methods can be added to interfaces **without breaking** existing implementations.
+
+---
+
+### 🔹 2. **`private` Access Modifier in Interfaces**
+
+* ✅ **Yes, interfaces can use `private` and `private static` methods**, but **only from Java 9** onwards.
+* These methods **cannot be accessed by implementing classes**.
+* They are used to **reduce code duplication** within the interface itself (e.g., in `default` or `static` methods).
+
+#### 🔸 Example:
+
+```java
+interface MyInterface {
+    default void display() {
+        helper(); // calling private method
+    }
+
+    private void helper() {
+        System.out.println("Private helper in interface");
+    }
+
+    static void utility() {
+        staticHelper(); // calling private static method
+    }
+
+    private static void staticHelper() {
+        System.out.println("Private static method in interface");
+    }
+}
+```
+
+#### 🔹 Purpose:
+
+* Improve code reusability **within the interface**.
+* Keep helper methods **encapsulated** and not exposed to implementing classes.
+
+---
+
+### 🔸 Important Notes:
+
+| Modifier         | Allowed in Interface? | Since Java Version | Accessible by Implementing Class? |
+| ---------------- | --------------------- | ------------------ | --------------------------------- |
+| `default`        | ✅ Yes                 | Java 8             | ✅ Yes                             |
+| `private`        | ✅ Yes                 | Java 9             | ❌ No                              |
+| `private static` | ✅ Yes                 | Java 9             | ❌ No                              |
+
+---
+
+### ✅ Summary:
+
+* **`default`**: Allows interfaces to provide method bodies.
+* **`private`**: Allows helper methods **only usable within the interface**.
+* Used for cleaner and more maintainable interface code.
+
+Let me know if you want to see how these work in a real Java class with `implements`!
+
+
 ### 38. How do you define an Interface?
 
 **Answer:**
@@ -1076,6 +1168,8 @@ class SampleImpl	implements ExampleInterface1,ExampleInterface2{
 An abstract class is a class that cannot be instantiated, but must be inherited from. An abstract class may
 be fully implemented, but is more usually partially implemented or not implemented at all, thereby
 encapsulating common functionality for inherited classes.
+
+In Abstract class all Methods, Functions and variables Must be marked as a "abstract".
 
 ```
 public abstract class AbstractClassExample	{
