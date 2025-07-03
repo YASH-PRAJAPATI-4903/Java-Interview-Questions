@@ -1076,6 +1076,19 @@ definition.
 static
 methods within the interface definition.
 
+### Bonus. Interface member access table.
+
+**Answer:**
+
+| **Member Type**           | **Accessible from default & private methods in interface?** | **Accessible from static methods in interface?** | **Accessible from methods in classes implementing interface?** | **Accessible without an instance?** |
+| ------------------------- | ----------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------- | ----------------------------------- |
+| **Constant Variable**     | ✅ Yes                                                       | ✅ Yes                                            | ✅ Yes                                                          | ✅ Yes                               |
+| **Abstract Method**       | ✅ Yes                                                       | ❌ No                                             | ✅ Yes                                                          | ❌ No                                |
+| **Default Method**        | ✅ Yes                                                       | ❌ No                                             | ✅ Yes                                                          | ❌ No                                |
+| **Static Method**         | ✅ Yes                                                       | ✅ Yes                                            | ✅ Yes *(via interface name)*                                   | ✅ Yes *(via interface name)*        |
+| **Private Method**        | ✅ Yes *(used internally)*                                   | ❌ No                                             | ❌ No                                                           | ❌ No                                |
+| **Private Static Method** | ✅ Yes *(used internally)*                                   | ✅ Yes                                            | ❌ No                                                           | ❌ No                                |
+
 ### 38. How do you define an Interface?
 
 **Answer:**
