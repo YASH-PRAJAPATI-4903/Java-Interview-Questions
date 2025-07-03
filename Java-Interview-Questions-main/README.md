@@ -3004,7 +3004,7 @@ Count	when	Instance	Initializer	is	run	is	2
 Instance	Initializer:
 Count	when	Instance	Initializer	is	run	is	3
 
-### 125. Declaring a Sealed Class.
+### 126. Declaring a Sealed Class.
 
 **Answer:**
 
@@ -3035,3 +3035,27 @@ within the same file or the subclasses are nested within the sealed class.
 
 ■■ Interfaces can be sealed to limit the classes that implement them or the interfaces that
 extend them.
+
+### IMP. POJO :- Plain Old Java Object
+
+### 127. What is record? 
+
+**Answer:**
+
+![image](https://github.com/user-attachments/assets/28ff960e-ab98-4085-9de1-07501ba78a14)
+
+Members Automatically Added to Records:
+
+■■ Constructor: A constructor with the parameters in the same order as the record
+declaration.
+
+■■ Accessor method: One accessor for each field.
+
+■■ equals(): A method to compare two elements that returns true if each field is equal in
+terms of equals().
+
+■■ hashCode(): A consistent hashCode() method using all of the fields.
+
+■■ toString(): A toString() implementation that prints each field of the record in a
+convenient, easy-to-read format.
+
