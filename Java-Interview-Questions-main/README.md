@@ -3003,3 +3003,18 @@ Count	when	Instance	Initializer	is	run	is	2
 
 Instance	Initializer:
 Count	when	Instance	Initializer	is	run	is	3
+
+### 125. Declaring a Sealed Class.
+
+**Answer:**
+
+Sealed Class Keywords:
+
+■■ sealed: Indicates that a class or interface may only be extended/implemented by named
+classes or interfaces.
+■■ permits: Used with the sealed keyword to list the classes and interfaces allowed
+■■ non-sealed:
+Applied to a class or interface that extends a sealed class, indicating that it
+can be extended by unspecified classes
+
+![image](https://github.com/user-attachments/assets/ab5e43f2-da3c-4c5a-a9cd-053d13cd2654)
