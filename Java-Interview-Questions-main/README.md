@@ -2821,6 +2821,10 @@ they have the same numbers in all positions and have the same size.
 Enum allows specifying a list of values for a Type. Consider the example below. It declares an enum 
 Season with 4 possible values.
 
+In programming, it is common to have a type that can only have a finite set of values, such
+as days of the week, seasons of the year, primary colors, and so on. An enumeration, or enum
+for short, is like a fixed set of constants.
+
 	enum Season	{
 		WINTER,	SPRING,	SUMMER,	FALL
 	};
@@ -2829,6 +2833,7 @@ Season with 4 possible values.
 
 **Answer:**
 Example	below	shows	how	we	can	use	a	switch	around	an	enum.
+
 								
 	//Using	switch	statement	on	an	enum
 	public int getExpectedMaxTemperature() {
