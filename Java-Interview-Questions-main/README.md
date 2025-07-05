@@ -3059,3 +3059,40 @@ terms of equals().
 ■■ toString(): A toString() implementation that prints each field of the record in a
 convenient, easy-to-read format.
 
+### 127. What is Lambda Function.
+
+**Answer:**
+
+A lambda function in Java is a concise way to represent an anonymous function—a function without a name. It allows you to write inline implementations of functional interfaces (interfaces with just one abstract method).
+
+■■ A single parameter specified with the name a.
+
+■■ The arrow operator (->) to separate the parameter and body.
+
+■■ A body that calls a single method and returns the result of that method.
+![image](https://github.com/user-attachments/assets/37beab9c-b077-407a-bbd2-eac772531bc4)
+
+■■ A single parameter specified with the name a and stating that the type is Animal.
+
+■■ The arrow operator (->) to separate the parameter and body.
+
+■■ A body that has one or more lines of code, including a semicolon and a return statement.
+![image](https://github.com/user-attachments/assets/9bb7b7d8-9ce6-481c-aa77-25a00c8810f4)
+
+
+Valid lambdas that return a boolean:
+| Lambda Expression                              | # of Parameters | Explanation                                   |
+| ---------------------------------------------- | --------------- | --------------------------------------------- |
+| `() -> true`                                   | 0               | No parameters, returns `true`.                |
+| `x -> x.startsWith("test")`                    | 1               | One parameter (`x`), type inferred.           |
+| `(String x) -> x.startsWith("test")`           | 1               | One parameter (`x`), type explicitly given.   |
+| `(x, y) -> { return x.startsWith("test"); }`   | 2               | Two parameters (`x` and `y`), types inferred. |
+| `(String x, String y) -> x.startsWith("test")` | 2               | Two parameters, both with explicit types.     |
+
+Invalid lambdas that should return a boolean:
+| **Invalid Lambda**                        | **Reason (Error)**                               | **Corrected Version**                      |
+| ----------------------------------------- | ------------------------------------------------ | ------------------------------------------ |
+| `x, y -> x.startsWith("fish")`            | ❌ Missing parentheses around multiple parameters | `(x, y) -> x.startsWith("fish")`           |
+| `x -> { x.startsWith("camel"); }`         | ❌ Missing `return` statement inside `{}` block   | `x -> { return x.startsWith("camel"); }`   |
+| `x -> { return x.startsWith("giraffe") }` | ❌ Missing semicolon (`;`) after return statement | `x -> { return x.startsWith("giraffe"); }` |
+| `String x -> x.endsWith("eagle")`         | ❌ Missing parentheses around typed parameter     | `(String x) -> x.endsWith("eagle")`        |
